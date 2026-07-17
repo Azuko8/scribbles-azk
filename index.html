@@ -8,11 +8,23 @@
          href="https://fonts.googleapis.com/css?family=Raleway"
          />
       <style>
+      html {
+  		scroll-behavior: smooth;
+	}
+      @keyframes pulse {
+  		0% { opacity: 1; }
+  		50% { opacity: 0.5; }
+  		100% { opacity: 1; }
+	}
       	 body {
+      	 	
          color:rgb(225, 222, 255);
 	.poem-title {
 	margin: 0 0 0px 0;
 	font-size: 1.3em;
+	background: linear-gradient(180deg, #f4b8e4, #85c1dc);
+  	-webkit-background-clip: text;
+ 	color: transparent
 	}
 	.poem-date {
 	margin: 0 0 0px 0;
@@ -38,9 +50,9 @@
 	}
 	background: #99d1db;
 	font-family: "Raleway", monospace;
-	 .toc {
+	 .toc { 								/*toc block itself*/
 	 display: block;
-	 background: #51576d;
+	 background: #51576d; 
 	 width: fit-content;
      border: 4px solid #585b70;
      padding: 14px;
@@ -49,9 +61,14 @@
      margin: 0 auto 10px auto;
      font-size: 1.4em;
 	}
+	
+	.back-to-top:hover,
+	.toc a:hover {
+  	animation: pulse .7s infinite;
+	}
 
 	.toc ul {
-	text-align: center;
+	text-align: center;	
  	list-style: none;
  	padding: 0;
  	margin: 0;
@@ -61,8 +78,8 @@
  	 margin-bottom: 6px;
 	}
 
-	.toc a {
-	  color: #babbf1;
+	.toc a { 								/*text*/
+	  color: #babbf1; 
  	  text-decoration: none;
 	}
 	
@@ -78,13 +95,13 @@
        width: fit-content;
        font-size: 1.3em;
        color: #babbf1;
-       background: #51576d;
+       background: #51576d; 
        border: 2px solid #585b70;
        padding: 2px 8px;
        border-radius: 8px;
        margin: 0 auto 10px auto;
-	   text-align: center;
-	   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+       text-align: center;
+       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
 
     .poem-grid {
@@ -104,17 +121,20 @@
     
     a {
     	color:#b5bfe2;
+    	transition: color 0.3s ease;
     }
-
-   p5 {
+	
+	a:hover { color: #f38ba8; }
+    
+    p5 {
     	display: block;
     	text-align: center;
-	    margin-bottom: 8px;
+    	margin-bottom: 8px;
     }
-			 
+    
     p2 {
     font-size: 1.4em;
-	text-align: center;
+    text-align: center;
     display: block;
 	background: #51576d;
 	width: fit-content;
@@ -134,14 +154,15 @@
      border-radius: 8px;
      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
-
-	p4 {
+    
+    p4 {
     	color: rgb(255,160,160);
     	font-size: 1em;
     	display: block;
     	text-align: center;
     	margin-bottom: 8px;
     }
+    
       </style>
        <body style="background-color:#414559;">
       <title>scribbles-azk</title>
@@ -149,9 +170,8 @@
       <p5>The poems here are the ones i didn't include in my book. you can find it here if interested : 
       <a href="https://linktr.ee/andrewazk">Book</a> 
       </p5>
-     
          <p2>Table of Contents (newest to oldest) : </p2>
-		 <p4>The table of contents is interactive. Just click on a title and you will be redirected</p4>
+         <p4>The table of contents is interactive. Just click on a title and you will be redirected</p4>
    		 <nav class="toc">
   	<ul>
     	<li><a href="#outsiders">Outsiders</a></li>
@@ -622,8 +642,8 @@ so i can stop watching over you
 </div>
 <footer>
   <p2>Author: Azuko</p2>
-  <p2>Latest update : July 15th, 2026</p2>
-  <p2>v1.1</p2>
+  <p2>Latest update : July 17th, 2026</p2>
+  <p2>v1.2</p2>
 </footer>
    </body>
 </html>
